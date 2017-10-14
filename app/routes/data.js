@@ -7,5 +7,6 @@ const router = express.Router();
 
 /* GET home page. */
 router.post('/saveData/:mpid', controller.create);
+router.get('/getData/:mpid', controller.get);
 
 module.exports = router;

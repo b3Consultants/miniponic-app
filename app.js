@@ -25,6 +25,12 @@ app.get('/metrics', (req, res) => {
   res.send(metrics.metrics.getAll(req.query.reset));
 });
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 const server = http.createServer(app);
 
 app.use('/', Miniponic);
