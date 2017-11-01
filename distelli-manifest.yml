@@ -1,4 +1,7 @@
 elmaco93/miniponic-app:
+  # Distelli Manifest example
+  # this example assumes the build and deploy servers are:
+  # Ubuntu 14.04
 
   PreRelease:
     - echo "---Beginning PreRelease---"
@@ -35,7 +38,7 @@ elmaco93/miniponic-app:
     - npm install
 
   Env:
-    - PORT: 8081
+    - PORT: 8082
 
   Exec:
     - /usr/bin/nodejs app.js
